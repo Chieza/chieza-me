@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { OutlineButton, GradientButton, NavbarButton } from "../buttons";
 import { HiMenu, HiX } from "react-icons/hi";
-import Logo from "../../assets/images/Logo.svg";
+import Logo from "../../assets/images/logo.svg";
 
 interface MainNavbarProps {
   onContactClick: () => void
