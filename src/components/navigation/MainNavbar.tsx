@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { OutlineButton, GradientButton, NavbarButton } from "../buttons";
 import { HiMenu, HiX } from "react-icons/hi";

@@ -1,4 +1,3 @@
-import React from 'react'
 import Modal from '../common/Modal'
 import CopyButton from '../common/CopyButton'
 import { SiGmail, SiWhatsapp } from 'react-icons/si'

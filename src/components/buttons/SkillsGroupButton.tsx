@@ -1,5 +1,3 @@
-// File: src/components/buttons/SkillsGroupButton.tsx
-import React from 'react'
 import classNames from 'classnames'
 import type { SkillGroup } from '../../utils/skillGroups'
 import { SKILL_GROUPS } from '../../utils/skillGroups'

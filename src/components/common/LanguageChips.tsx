@@ -1,5 +1,3 @@
-// src/components/common/LanguageChips.tsx
-import React from 'react';
 import BR from '../../assets/images/flags/br.svg';
 import US from '../../assets/images/flags/us.svg';
 import ES from '../../assets/images/flags/es.svg';

@@ -1,8 +1,7 @@
-// src/components/cards/SkillsToolsCard.tsx
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import GroupCard from "./GroupCard";
-import type { SkillGroup } from "../buttons/SkillsGroupButton";
+import type { SkillGroup } from "../../utils/skillGroups";
 
 // import backgrounds
 import designBg from "../../assets/images/backgrounds/skill-groups/design.jpg";

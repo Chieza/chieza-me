@@ -1,5 +1,3 @@
-// File: src/components/cards/GroupCard.tsx
-import React from 'react'
 import type { SkillGroup } from '../../utils/skillGroups'
 import { SKILL_GROUPS } from '../../utils/skillGroups'
 

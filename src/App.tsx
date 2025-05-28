@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import MainNavbar from './components/navigation/MainNavbar'
 import AppRoutes   from './routes/AppRoutes'
 import ContactModal from './components/modals/ContactModal'

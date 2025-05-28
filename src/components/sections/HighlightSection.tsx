@@ -1,4 +1,3 @@
-import React from "react";
 import HighlightBg from "../../assets/images/backgrounds/sections/highlight-bg.png";
 import ComponentsExample from "../../assets/images/projects/components-example.jpg";
 import VariablesExample from "../../assets/images/projects/variables-example.jpg";

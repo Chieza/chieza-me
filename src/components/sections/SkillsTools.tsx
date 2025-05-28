@@ -1,7 +1,6 @@
-// src/components/sections/SkillsTools.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import SkillsGroupButton from "../buttons/SkillsGroupButton";
-import type { SkillGroup } from "../buttons/SkillsGroupButton";
+import type { SkillGroup } from "../../utils/skillGroups";
 import SkillsToolsCard from "../cards/SkillsToolsCard";
 
 const allGroups: SkillGroup[] = [

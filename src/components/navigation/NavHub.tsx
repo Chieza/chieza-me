@@ -1,4 +1,3 @@
-import React from "react";
 import { HiHome, HiUser, HiStar, HiCog, HiChevronUp } from "react-icons/hi";
 import { NavHubButton } from "../buttons";
 

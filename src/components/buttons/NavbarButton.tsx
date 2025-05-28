@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom'
 import CustomButton from './CustomButton';
 import type { ButtonProps } from './CustomButton';

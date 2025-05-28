@@ -1,4 +1,3 @@
-import React from "react";
 import HeroBg from "../../assets/images/backgrounds/sections/hero-bg.png";
 import { Link } from "react-router-dom";
 import { OutlineButton, GradientButton } from "../buttons";

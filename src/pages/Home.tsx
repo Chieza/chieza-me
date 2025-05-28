@@ -1,4 +1,3 @@
-import React from 'react';
 import useDocumentTitle from '../hooks/useDocumentTitle'
 import HeroSection from '../components/sections/HeroSection';
 import MeSection from '../components/sections/MeSection';

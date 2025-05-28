@@ -1,5 +1,3 @@
-// src/components/buttons/NavHubButton.tsx
-import React from 'react';
 import classNames from 'classnames';
 
 export type NavHubButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;

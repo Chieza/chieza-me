@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Define a props interface including iconSizeClass
 export interface ToolCarouselProps {
   /** Tailwind classes to size the icons */

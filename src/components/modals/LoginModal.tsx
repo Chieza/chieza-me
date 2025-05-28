@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "../common/Modal";
 import { HiUser, HiLockClosed } from "react-icons/hi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
