@@ -9,13 +9,7 @@ interface MainNavbarProps {
 export default function HeroSection({ onContactClick }: MainNavbarProps) {
   return (
     <section
-      className="
-      // Subtract MainNavbar height from Viewport Height
-      h-[calc(100vh-4rem)]
-      relative
-      w-full
-      overflow-hidden
-      "
+      className="h-[calc(100vh-4rem)] relative w-full overflow-hidden"
     >
       {/* Background image, covers full area */}
       <img
@@ -26,12 +20,7 @@ export default function HeroSection({ onContactClick }: MainNavbarProps) {
 
       {/* Content overlay, centered */}
       <div
-        className="
-          relative z-10
-          flex flex-col items-center justify-center
-          h-full text-center
-          px-6 md:px-12 lg:px-24
-        "
+        className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12 lg:px-24"
       >
         <p className="text-white text-2xl md:text-4xl mb-8">Bruno Caliman</p>
         <h1 className="text-white text-4xl md:text-6xl font-bold mb-8">
