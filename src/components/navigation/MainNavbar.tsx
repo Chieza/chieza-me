@@ -40,7 +40,7 @@ export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarP
           </div>
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-white/75 focus:outline-none"
+            className="md:hidden text-white/75 focus:outline-none cursor-pointer"
             onClick={() => setOpen(!open)}
           >
             {open ? <HiX size={40} /> : <HiMenu size={40} />}
