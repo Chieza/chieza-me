@@ -13,7 +13,7 @@ export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarP
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-neutral-800 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-lg shadow-purple-500/8 bg-neutral-900">
       <div className="max-w-7xl mx-auto h-16 px-4 flex items-center justify-between">
         {/* Logo */}
         <div>
@@ -40,49 +40,49 @@ export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarP
           </div>
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-white/75 focus:outline-none"
             onClick={() => setOpen(!open)}
           >
-            {open ? <HiX size={24} /> : <HiMenu size={24} />}
+            {open ? <HiX size={40} /> : <HiMenu size={40} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#0f0f0f] px-4 pb-4 space-y-2">
+        <div className="md:hidden px-8 py-8 space-y-4 text-white bg-neutral-900">
           <Link
             to="/"
             onClick={() => setOpen(false)}
-            className="block text-white"
+            className="block"
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setOpen(false)}
-            className="block text-white"
+            className="block"
           >
             About
           </Link>
           <Link
             to="/experiences"
             onClick={() => setOpen(false)}
-            className="block text-white"
+            className="block"
           >
             Experiences
           </Link>
           <Link
             to="/portfolio"
             onClick={() => setOpen(false)}
-            className="block text-white"
+            className="block"
           >
             Portfolio
           </Link>
           <Link
             to="/side-projects"
             onClick={() => setOpen(false)}
-            className="block text-white"
+            className="block"
           >
             Side Projects
           </Link>
