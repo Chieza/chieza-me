@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MainNavbar from './components/navigation/MainNavbar'
+import { MainNavbar, NavHub } from './components/navigation';
 import AppRoutes   from './routes/AppRoutes'
 import ContactModal from './components/modals/ContactModal'
 import LoginModal from './components/modals/LoginModal'
@@ -19,6 +19,7 @@ function App() {
       onContactClick={openContact}
       onLoginClick={openLogin}
       />
+      <NavHub />
       <main className="flex-grow pt-16">
         <AppRoutes openContact={openContact } />
       </main>
