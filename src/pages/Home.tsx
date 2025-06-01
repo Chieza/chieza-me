@@ -14,12 +14,13 @@ export default function Home({ openContact }: HomeProps) {
   useDocumentTitle('Bruno • Product Designer')
   return (
     <>
-    {/* Page Sections */}
-    <HeroSection onContactClick={openContact}/>
     <ScrollIndicator />
-    <MeSection />
-    <HighlightSection />
-    <SkillsTools />
+
+    {/* Page Sections - Each section needs a unique 'id' */}
+    <HeroSection id="hero-section" onContactClick={openContact}/>
+    <MeSection id="me-section" />
+    <HighlightSection id="highlight-section" />
+    <SkillsTools id="skills-tools-section" />
     <Footer />
     </>
   );

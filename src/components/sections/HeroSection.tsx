@@ -1,14 +1,19 @@
 import HeroBg from "../../assets/images/backgrounds/sections/hero-bg.png";
 import { Link } from "react-router-dom";
 import { OutlineButton, GradientButton } from "../buttons";
+import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { HiHome } from "react-icons/hi";
 
-interface MainNavbarProps {
-  onContactClick: () => void
+interface HeroSectionProps {
+  id: string;
+  onContactClick: () => void;
 }
 
-export default function HeroSection({ onContactClick }: MainNavbarProps) {
+export default function HeroSection({ id, onContactClick }: HeroSectionProps) {
+  useSectionRegistry(id, HiHome, 'Hero');
   return (
     <section
+      id={id}
       className="h-[calc(100vh-4rem)] relative w-full overflow-hidden"
     >
       {/* Background image, covers full area */}
@@ -19,9 +24,7 @@ export default function HeroSection({ onContactClick }: MainNavbarProps) {
       />
 
       {/* Content overlay, centered */}
-      <div
-        className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12 lg:px-24"
-      >
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12 lg:px-24">
         <p className="text-white text-2xl md:text-4xl mb-8">Bruno Caliman</p>
         <h1 className="text-white text-4xl md:text-6xl font-bold mb-8">
           Designing Solutions That Flows!
@@ -34,7 +37,7 @@ export default function HeroSection({ onContactClick }: MainNavbarProps) {
 
         {/* Buttons row */}
         <div className="flex flex-wrap gap-4 justify-center">
-            <OutlineButton onClick={onContactClick}>Let's Chat!</OutlineButton>
+          <OutlineButton onClick={onContactClick}>Let's Chat!</OutlineButton>
           <Link to="/portfolio">
             <GradientButton>Explore My Work</GradientButton>
           </Link>

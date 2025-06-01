@@ -1,8 +1,16 @@
 import MeCard from "../cards/MeCard";
+import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { HiUser } from "react-icons/hi";
 
-export default function MeSection() {
+interface MeSectionProps {
+  id: string;
+}
+
+export default function MeSection({ id }: MeSectionProps) {
+  useSectionRegistry(id, HiUser, 'About Me');
   return (
     <section
+      id={id}
       className="
       flex justify-center items-center
       w-full

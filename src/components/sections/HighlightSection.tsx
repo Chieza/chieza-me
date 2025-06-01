@@ -1,10 +1,18 @@
 import HighlightBg from "../../assets/images/backgrounds/sections/highlight-bg.png";
 import ComponentsExample from "../../assets/images/projects/components-example.jpg";
 import VariablesExample from "../../assets/images/projects/variables-example.jpg";
+import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { HiStar } from "react-icons/hi";
 
-export default function HeroSection() {
+interface HighlightSectionProps {
+  id: string;
+}
+
+export default function HeroSection({ id }: HighlightSectionProps) {
+  useSectionRegistry(id, HiStar, "Highlights");
   return (
     <section
+      id={id}
       className="
     relative
     flex
@@ -37,9 +45,9 @@ export default function HeroSection() {
           Current Highlight
         </h1>
         <p className="text-white text-base md:text-lg">
-          <span className="font-bold">ChiezaDS | </span>Built a badass Design System to keep my portfolio looking
-          sharp, because pixel-perfect or detail-oriented ain't just a
-          “buzzword” for me.
+          <span className="font-bold">ChiezaDS | </span>Built a badass Design
+          System to keep my portfolio looking sharp, because pixel-perfect or
+          detail-oriented ain't just a “buzzword” for me.
         </p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Color palette card */}

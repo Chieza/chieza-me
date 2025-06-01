@@ -2,6 +2,12 @@ import { useState } from "react";
 import SkillsGroupButton from "../buttons/SkillsGroupButton";
 import type { SkillGroup } from "../../utils/skillGroups";
 import SkillsToolsCard from "../cards/SkillsToolsCard";
+import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { HiOutlinePuzzle } from "react-icons/hi";
+
+interface SkillsToolsProps {
+  id: string;
+}
 
 const allGroups: SkillGroup[] = [
   "design",
@@ -12,11 +18,13 @@ const allGroups: SkillGroup[] = [
   "dev",
 ];
 
-export default function SkillsTools() {
+export default function SkillsTools({ id }: SkillsToolsProps) {
   const [selected, setSelected] = useState<SkillGroup>("design");
+  useSectionRegistry(id, HiOutlinePuzzle, "Skills & Tools");
 
   return (
     <section
+      id={id}
       className="
     flex flex-col
     items-center
@@ -54,9 +62,9 @@ export default function SkillsTools() {
             />
           ))}
         </div>
-        
-      {/* Animated Card */}
-      <SkillsToolsCard selected={selected} />
+
+        {/* Animated Card */}
+        <SkillsToolsCard selected={selected} />
       </div>
     </section>
   );
