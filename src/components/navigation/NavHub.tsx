@@ -1,25 +1,37 @@
-import { HiHome, HiUser, HiStar, HiCog, HiChevronUp } from "react-icons/hi";
+import { HiChevronUp } from "react-icons/hi"; // Only needed here, it'll always appear inside NavHub when rendered
 import { NavHubButton } from "../buttons";
+import { useSections } from "../../hooks/useSections";
 
 export default function NavHub() {
+  const { sections, activeSectionId, scrollToSection } = useSections();
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Conditional rendering: Don't render NavHub if there are no sections
+  if (sections.length === 0) {
+    return null;
+  }
+
   return (
-    <nav
-      className="flex flex-col p-2 space-y-4 bg-gradient-to-b from-purple-100/16 to-blue-300/16 rounded-full backdrop-blur-lg transition-all duration-1000 ease-in-out fixed top-1/2 right-8 transform -translate-y-1/2 z-50"
-    >
-      <NavHubButton aria-label="Home">
-        <HiHome size={20} />
-      </NavHubButton>
-      <NavHubButton aria-label="Profile">
-        <HiUser size={20} />
-      </NavHubButton>
-      <NavHubButton aria-label="Favorites">
-        <HiStar size={20} />
-      </NavHubButton>
-      <NavHubButton aria-label="Settings">
-        <HiCog size={20} />
-      </NavHubButton>
-      <NavHubButton aria-label="Back to top">
-        <HiChevronUp size={20} />
+    <nav className="nav-hub">
+      {/* Map over dynamically registered sections */}
+      {sections.map((section) => (
+        <NavHubButton
+          key={section.id}
+          aria-label={section.label}
+          onClick={() => scrollToSection(section.id)}
+          // Apply active state styling
+          className={activeSectionId === section.id ? "bg-white/20" : ""} // Example active style
+        >
+          <section.icon size={16} />
+        </NavHubButton>
+      ))}
+
+      {/* Always include the scroll-to-top button as the last one */}
+      <NavHubButton aria-label="Back to top" onClick={handleScrollToTop}>
+        <HiChevronUp size={16} />
       </NavHubButton>
     </nav>
   );
