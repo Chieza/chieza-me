@@ -33,3 +33,41 @@
 .animate-bounce {
   animation: bounce 1.5s infinite; /* Adjust duration for desired smoothness */
 }
+
+.nav-hub {
+  /* Base (Mobile) Styles */
+  position: fixed;
+  z-index: 50;
+  padding: 8px; /* p-2 = 8px */
+  border-radius: 9999px; /* rounded-full */
+  transition: all 1000ms ease-in-out; /* transition-all duration-1000 ease-in-out */
+
+  display: flex;
+  flex-direction: row; /* flex flex-row */
+  gap: 16px; /* space-x-4 */
+
+  bottom: 16px; /* bottom-4 */
+  left: 50%; /* left-1/2 */
+  transform: translateX(-50%); /* -translate-x-1/2 */
+
+  /* Gradient and Backdrop */
+  background-image: linear-gradient(to right, rgba(168, 85, 247, 0.16), rgba(96, 165, 250, 0.16)); /* bg-gradient-to-r from-purple-500/16 to-blue-500/16 */
+  backdrop-filter: blur(4px); /* backdrop-blur-xs */
+}
+
+/* Desktop Styles (md breakpoint and up) */
+@media (min-width: 768px) { /* md breakpoint is 768px by default in Tailwind */
+  .nav-hub {
+    flex-direction: column; /* md:flex-col */
+    gap: 0; /* Reset mobile gap */
+    row-gap: 16px; /* md:space-y-4 */
+
+    top: 50%; /* md:top-1/2 */
+    right: 32px; /* md:right-8 */
+    left: auto; /* md:left-auto */
+    bottom: auto; /* md:bottom-auto */
+    transform: translateY(-50%) translateX(0); /* md:-translate-y-1/2 md:translate-x-0 */
+
+    background-image: linear-gradient(to bottom, rgba(168, 85, 247, 0.16), rgba(96, 165, 250, 0.16)); /* md:bg-gradient-to-b */
+  }
+}
