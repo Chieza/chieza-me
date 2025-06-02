@@ -5,9 +5,20 @@ import { useSections } from "../../hooks/useSections";
 export default function NavHub() {
   const { sections, activeSectionId, scrollToSection } = useSections();
 
+  {/* HANDLERS */}
+  // Last Button, always scrolls to top - 64px (MainNavbar's height)
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0 - 64, behavior: "smooth" });
   };
+  
+  // Defines the First Button, always scrolls to top - 64px, so it activates the current section's feedback of NavHub
+  const handleButtonClick = (sectionId: string, buttonIndex: number) => {
+  if (buttonIndex === 0) {
+    handleScrollToTop();
+  } else {
+    scrollToSection(sectionId);
+  }
+};
 
   // Conditional rendering: Don't render NavHub if there are no sections
   if (sections.length === 0) {
@@ -17,21 +28,21 @@ export default function NavHub() {
   return (
     <nav className="nav-hub">
       {/* Map over dynamically registered sections */}
-      {sections.map((section) => (
+      {sections.map((section, index) => (
         <NavHubButton
           key={section.id}
           aria-label={section.label}
-          onClick={() => scrollToSection(section.id)}
+          onClick={() => handleButtonClick(section.id, index)}
           // Apply active state styling
-          className={activeSectionId === section.id ? "bg-white/20" : ""} // Example active style
+          className={activeSectionId === section.id ? "bg-white/16" : ""}
         >
-          <section.icon size={16} />
+          <section.icon size={24} />
         </NavHubButton>
       ))}
 
       {/* Always include the scroll-to-top button as the last one */}
       <NavHubButton aria-label="Back to top" onClick={handleScrollToTop}>
-        <HiChevronUp size={16} />
+        <HiChevronUp size={24} />
       </NavHubButton>
     </nav>
   );

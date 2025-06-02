@@ -8,7 +8,7 @@ import type { NavSection, SectionsContextType } from "../types/nav-section"; // 
 import { SectionsContext } from "./_sections-context"; // Import the context object
 
 // Provider component that manages state and provides the context value
-// Create an exception for the first button to scroll up to the first section's id + main navabar's height
+
 
 export const SectionsProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

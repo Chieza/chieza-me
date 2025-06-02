@@ -1,5 +1,5 @@
-import React from 'react';
+import { createContext } from 'react';
 import type { SectionsContextType } from '../types/nav-section';
 
 // Create and export the context object
-export const SectionsContext = React.createContext<SectionsContextType | undefined>(undefined);
+export const SectionsContext = createContext<SectionsContextType | undefined>(undefined);
