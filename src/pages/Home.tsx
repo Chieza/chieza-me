@@ -1,9 +1,5 @@
 import useDocumentTitle from '../hooks/useDocumentTitle'
-import HeroSection from '../components/sections/HeroSection'
-import MeSection from '../components/sections/MeSection'
-import HighlightSection from '../components/sections/HighlightSection'
-import SkillsTools from '../components/sections/SkillsTools'
-import Footer from '../components/sections/Footer'
+import { HeroSection, MeSection, HighlightSection, SkillsToolsSection, Footer } from '../components/sections';
 import ScrollIndicator from '../components/navigation/ScrollIndicator'
 
 interface HomeProps {
@@ -20,7 +16,7 @@ export default function Home({ openContact }: HomeProps) {
     <HeroSection id="hero-section" onContactClick={openContact}/>
     <MeSection id="me-section" />
     <HighlightSection id="highlight-section" />
-    <SkillsTools id="skills-tools-section" />
+    <SkillsToolsSection id="skills-tools-section" />
     <Footer />
     </>
   );
