@@ -25,15 +25,7 @@ export default function SkillsTools({ id }: SkillsToolsProps) {
   return (
     <section
       id={id}
-      className="
-    flex flex-col
-    items-center
-    overflow-hidden
-    w-full
-    px-4 pt-24 pb-8
-    sm:px-8 sm:pt-32 sm:pb-16
-    lg:px-16 lg:pt-48 lg:pb-32
-    "
+      className="min-h-[calc(100vh+2rem)] flex flex-col items-center justify-center overflow-hidden w-full px-4 pt-24 pb-8 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
     >
       <div
         className="w-full max-w-[1200px]

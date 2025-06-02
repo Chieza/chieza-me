@@ -13,7 +13,7 @@ const ScrollIndicator: React.FC = () => {
   // Scroll down the page and hide Scroll Indicator
   const handleClick = useCallback(() => {
     // Scroll down
-    window.scrollBy({ top: window.innerHeight - 64, behavior: 'smooth' }); // Minus 64px is due to 1rem = 16px (4rem), adjust if needed
+    window.scrollBy({ top: window.innerHeight + 64, behavior: 'smooth' }); // Minus 64px is due to 1rem = 16px (4rem), adjust if needed
     setIsVisible(false); // Hide after click
   }, []);
 

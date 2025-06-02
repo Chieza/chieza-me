@@ -34,6 +34,7 @@
   animation: bounce 1.5s infinite; /* Adjust duration for desired smoothness */
 }
 
+/* NavHub */
 .nav-hub {
   /* Base (Mobile) Styles */
   position: fixed;
@@ -46,7 +47,7 @@
   flex-direction: row; /* flex flex-row */
   gap: 16px; /* space-x-4 */
 
-  bottom: 16px; /* bottom-4 */
+  bottom: 64px; /* bottom-4 */
   left: 50%; /* left-1/2 */
   transform: translateX(-50%); /* -translate-x-1/2 */
 

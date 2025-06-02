@@ -6,7 +6,7 @@ export default function NavHub() {
   const { sections, activeSectionId, scrollToSection } = useSections();
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 - 64, behavior: "smooth" });
   };
 
   // Conditional rendering: Don't render NavHub if there are no sections

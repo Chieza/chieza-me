@@ -13,17 +13,7 @@ export default function HeroSection({ id }: HighlightSectionProps) {
   return (
     <section
       id={id}
-      className="
-    relative
-    flex
-    flex-col
-    items-center
-    overflow-hidden
-    w-full
-    px-4 pt-24 pb-8
-    sm:px-8 sm:pt-32 sm:pb-16
-    lg:px-16 lg:pt-48 lg:pb-32
-    "
+      className="min-h-[calc(100vh+16rem)] relative flex flex-col items-center justify-center overflow-hidden w-full px-4 pt-24 pb-8 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
     >
       {/* Background Image*/}
       <img
@@ -34,12 +24,7 @@ export default function HeroSection({ id }: HighlightSectionProps) {
 
       {/* Content */}
       <div
-        className="
-        max-w-[1200px]
-        relative z-10
-        flex flex-col
-        gap-8
-        "
+        className="max-w-[1200px] relative z-10 flex flex-col gap-8"
       >
         <h1 className="text-white text-4xl md:text-6xl font-bold">
           Current Highlight

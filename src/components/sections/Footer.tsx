@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="text-white border-t border-neutral-800">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 pt-8 pb-48 md:pb-8">
         {/* nav links */}
         <nav className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
           {links.map(({ to, label }) => (
