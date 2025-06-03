@@ -14,7 +14,7 @@ export default function HeroSection({ id, onContactClick }: HeroSectionProps) {
   return (
     <section
       id={id}
-      className="min-h-[calc(100vh+2rem)] relative w-full overflow-hidden flex items-center justify-center"
+      className="min-h-[calc(100vh-4rem)] relative w-full overflow-hidden flex items-center justify-center"
     >
       {/* Background */}
       <img

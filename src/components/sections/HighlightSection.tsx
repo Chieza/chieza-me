@@ -13,7 +13,7 @@ export default function HeroSection({ id }: HighlightSectionProps) {
   return (
     <section
       id={id}
-      className="min-h-[calc(100vh+16rem)] relative flex flex-col items-center justify-center overflow-hidden w-full px-4 pt-24 pb-8 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
+      className="relative flex flex-col items-center justify-center overflow-hidden w-full px-4 py-16 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
     >
       {/* Background Image*/}
       <img
