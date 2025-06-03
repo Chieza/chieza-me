@@ -3,12 +3,12 @@ import { SKILL_GROUPS } from '../../utils/skillGroups'
 
 // placeholder content per group
 const contentMap: Record<SkillGroup, string[]> = {
-  design:      ['Figma', 'Sketch', 'Adobe XD', 'Miro'],
-  research:    ['User Interviews', 'Surveys', 'Persona Creation'],
-  'soft-meta': ['Agile/Scrum', 'Sprint Planning', 'Async Collaboration'],
-  management:  ['Roadmapping', 'Stakeholder Management', 'OKRs'],
-  comms:       ['Workshops', 'Presentations', 'Writing'],
-  dev:         ['React', 'TypeScript', 'Tailwind', 'Git'],
+  design:      ['Figma', 'Figjam', 'Design System', 'LottieFiles', 'Adobe XD'],
+  research:    ['Design Thinking', 'Usability Testing', 'User Flows', 'Wireframing', 'Surveys', 'Documentation'],
+  'soft-meta': ['Agile/Scrum', 'Sprint Planning','Autonomy', 'Async Collaboration', 'Accessibility Awareness'],
+  management:  ['Azuer DevOps', 'ClickUp', 'Notion', 'Google Workspace', 'Trello'],
+  comms:       ['Microsoft Teams', 'Discord', 'Slack', 'Discord'],
+  dev:         ['React', 'TypeScript', 'Tailwind', 'GitHub', 'Vite', 'HTML & CSS'],
 }
 
 export interface GroupCardProps {

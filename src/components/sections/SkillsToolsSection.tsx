@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SkillsGroupButton from "../buttons/SkillsGroupButton";
 import type { SkillGroup } from "../../utils/skillGroups";
-import SkillsToolsCard from "../cards/SkillsToolsCard";
+import SkillsToolsPanel from "../panels/SkillsToolsPanel";
 import { useSectionRegistry } from "../../hooks/useSectionRegistry";
 import { HiOutlinePuzzle } from "react-icons/hi";
 
@@ -56,7 +56,7 @@ export default function SkillsTools({ id }: SkillsToolsProps) {
         </div>
 
         {/* Animated Card */}
-        <SkillsToolsCard selected={selected} />
+        <SkillsToolsPanel selected={selected} />
       </div>
     </section>
   );

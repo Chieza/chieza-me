@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import GroupCard from "./GroupCard";
+import GroupCard from "../cards/SkillsToolsGroupCard";
 import type { SkillGroup } from "../../utils/skillGroups";
 
-// import backgrounds
+// Import backgrounds
 import designBg from "../../assets/images/backgrounds/skill-groups/design.jpg";
 import researchBg from "../../assets/images/backgrounds/skill-groups/research.jpg";
 import softMetaBg from "../../assets/images/backgrounds/skill-groups/soft-meta.jpg";
@@ -20,7 +20,7 @@ const bgMap: Record<SkillGroup, string> = {
   dev: devBg,
 };
 
-// possible entry offsets
+// Possible entry offsets
 const directions = [
   { x: -200, y: 0 },
   { x: 200, y: 0 },
@@ -58,7 +58,7 @@ export default function SkillsToolsCard({ selected }: SkillsToolsCardProps) {
   return (
     <div
       className="
-        relative w-full h-75 overflow-hidden rounded-lg
+        relative w-full h-100 overflow-hidden rounded-lg
         bg-center bg-cover
       "
     >
