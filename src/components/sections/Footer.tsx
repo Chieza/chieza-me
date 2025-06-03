@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SectionLayout } from '../layouts/index'
 
 export default function Footer() {
   const links = [
@@ -11,7 +12,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="text-white border-t border-neutral-800">
+    <SectionLayout className="border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 pt-8 pb-48 md:pb-8">
         {/* nav links */}
         <nav className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
@@ -31,6 +32,6 @@ export default function Footer() {
           © 2025 Bruno Chieza Caliman. Created by me with ❤️ from Vitória - Brasil.
         </p>
       </div>
-    </footer>
+    </SectionLayout>
   )
 }

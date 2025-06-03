@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { OutlineButton, GradientButton } from "../buttons";
 import { useSectionRegistry } from "../../hooks/useSectionRegistry";
 import { HiHome } from "react-icons/hi";
+import { SectionLayout } from '../layouts/index'
 
 interface HeroSectionProps {
   id: string;
@@ -12,9 +13,9 @@ interface HeroSectionProps {
 export default function HeroSection({ id, onContactClick }: HeroSectionProps) {
   useSectionRegistry(id, HiHome, 'Hero');
   return (
-    <section
-      id={id}
-      className="min-h-[calc(100vh-4rem)] relative w-full overflow-hidden flex items-center justify-center"
+    <SectionLayout
+    id={id}
+      className="min-h-[calc(100vh-4rem)] relative flex items-center justify-center"
     >
       {/* Background */}
       <img
@@ -43,6 +44,6 @@ export default function HeroSection({ id, onContactClick }: HeroSectionProps) {
           </Link>
         </div>
       </div>
-    </section>
+    </SectionLayout>
   );
 }

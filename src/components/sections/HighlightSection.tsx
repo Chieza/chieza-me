@@ -3,6 +3,7 @@ import ComponentsExample from "../../assets/images/projects/components-example.j
 import VariablesExample from "../../assets/images/projects/variables-example.jpg";
 import { useSectionRegistry } from "../../hooks/useSectionRegistry";
 import { HiStar } from "react-icons/hi";
+import { SectionLayout } from '../layouts/index'
 
 interface HighlightSectionProps {
   id: string;
@@ -11,9 +12,9 @@ interface HighlightSectionProps {
 export default function HeroSection({ id }: HighlightSectionProps) {
   useSectionRegistry(id, HiStar, "Highlights");
   return (
-    <section
+    <SectionLayout
       id={id}
-      className="relative flex flex-col items-center justify-center overflow-hidden w-full px-4 py-16 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
+      className="min-h-[calc(100vh+16rem)] relative flex flex-col items-center justify-center"
     >
       {/* Background Image*/}
       <img
@@ -83,6 +84,6 @@ export default function HeroSection({ id }: HighlightSectionProps) {
           consistency and streamlined scalability across my portfolio.
         </p>
       </div>
-    </section>
+    </SectionLayout>
   );
 }

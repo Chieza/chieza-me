@@ -4,6 +4,7 @@ import AppRoutes from "./routes/AppRoutes";
 import ContactModal from "./components/modals/ContactModal";
 import LoginModal from "./components/modals/LoginModal";
 import { SectionsProvider } from "./contexts/SectionsProvider";
+import { MainLayout } from "./components/layouts";
 
 function App() {
   const [isContactOpen, setContactOpen] = useState(false);
@@ -21,8 +22,10 @@ function App() {
       {/* Wrap AppRoutes with SectionsProvider */}
       <SectionsProvider>
         <NavHub />
-        <main className="flex-grow pt-16">
-          <AppRoutes openContact={openContact} />
+        <main className="flex-grow">
+          <MainLayout>
+            <AppRoutes openContact={openContact} />
+          </MainLayout>
         </main>
       </SectionsProvider>
 

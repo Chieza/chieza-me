@@ -4,6 +4,7 @@ import type { SkillGroup } from "../../utils/skillGroups";
 import SkillsToolsPanel from "../panels/SkillsToolsPanel";
 import { useSectionRegistry } from "../../hooks/useSectionRegistry";
 import { HiOutlinePuzzle } from "react-icons/hi";
+import { SectionLayout } from '../layouts/index'
 
 interface SkillsToolsProps {
   id: string;
@@ -23,9 +24,9 @@ export default function SkillsTools({ id }: SkillsToolsProps) {
   useSectionRegistry(id, HiOutlinePuzzle, "Skills & Tools");
 
   return (
-    <section
+    <SectionLayout
       id={id}
-      className="min-h-[calc(100vh+2rem)] flex flex-col items-center justify-center overflow-hidden w-full px-4 pt-24 pb-8 sm:px-8 sm:pt-32 sm:pb-16 lg:px-16 lg:pt-48 lg:pb-32"
+      className="min-h-[calc(100vh+2rem)] flex flex-col items-center justify-center"
     >
       <div
         className="w-full max-w-[1200px]
@@ -58,6 +59,6 @@ export default function SkillsTools({ id }: SkillsToolsProps) {
         {/* Animated Card */}
         <SkillsToolsPanel selected={selected} />
       </div>
-    </section>
+    </SectionLayout>
   );
 }
