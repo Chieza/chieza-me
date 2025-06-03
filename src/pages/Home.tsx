@@ -12,7 +12,7 @@ export default function Home({ openContact }: HomeProps) {
     <>
     <ScrollIndicator />
 
-    {/* Page Sections - Each section needs a unique 'id' */}
+    {/* Page Sections - Each section needs a unique 'id' to have a respective NavHubButton */}
     <HeroSection id="hero-section" onContactClick={openContact}/>
     <MeSection id="me-section" />
     <HighlightSection id="highlight-section" />
