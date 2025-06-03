@@ -6,7 +6,7 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="max-w-screen-xl mx-auto w-full">
+    <div className="w-full text-white">
       {children}
     </div>
   );
