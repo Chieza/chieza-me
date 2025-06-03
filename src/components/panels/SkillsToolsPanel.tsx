@@ -36,6 +36,7 @@ export default function SkillsToolsCard({ selected }: SkillsToolsCardProps) {
   // pick a random direction each render
   const dir = useMemo(
     () => directions[Math.floor(Math.random() * directions.length)],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [selected]
   );
 
