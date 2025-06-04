@@ -27,21 +27,11 @@ export default function MainNavbar({
 
         {/* Nav Links */}
         <div className="hidden md:flex flex-1 justify-center space-x-6">
-          <Link to="/">
-            <NavbarButton>Home</NavbarButton>
-          </Link>
-          <Link to="/about">
-            <NavbarButton>About</NavbarButton>
-          </Link>
-          <Link to="/experiences">
-            <NavbarButton>Experiences</NavbarButton>
-          </Link>
-          <Link to="/portfolio">
-            <NavbarButton>Portfolio</NavbarButton>
-          </Link>
-          <Link to="/side-projects">
-            <NavbarButton>Side Projects</NavbarButton>
-          </Link>
+          <NavbarButton to="/">Home</NavbarButton>
+          <NavbarButton to="/about">About</NavbarButton>
+          <NavbarButton to="/experiences">Experiences</NavbarButton>
+          <NavbarButton to="/portfolio">Portfolio</NavbarButton>
+          <NavbarButton to="/side-projects">Side Projects</NavbarButton>
         </div>
 
         {/* Action Buttons & Mobile Toggle */}
