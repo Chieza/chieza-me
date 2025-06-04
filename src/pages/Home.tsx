@@ -9,7 +9,7 @@ export default function Home({ openContact }: HomeProps) {
   useDocumentTitle('Bruno • Product Designer')
   return (
     <>
-    {/* Page Sections - Each section needs a unique 'id' to have a respective NavHubButton */}
+    {/* Sections - Each section needs unique 'id' for NavHubButton */}
     <HeroSection id="hero-section" onContactClick={openContact}/>
     <MeSection id="me-section" />
     <HighlightSection id="highlight-section" />
