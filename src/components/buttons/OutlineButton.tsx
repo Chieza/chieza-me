@@ -1,9 +1,19 @@
-import CustomButton from './CustomButton';
-import type { ButtonProps } from './CustomButton';
+import React from "react";
+import classNames from "classnames";
 
-/** Pre-configured outlined button */
+const outlineClasses = [
+  "px-4 py-2 text-white/94 border border-white rounded-lg transition-all duration-300 ease-in-out hover:bg-black/48 hover:text-white hover:border-white/0 hover:cursor-pointer",
+].join(" ");
+
 export default function OutlineButton(
-  props: Omit<ButtonProps, 'variant'>
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>
 ) {
-  return <CustomButton variant="outline" {...props} />;
+  return (
+    <button
+      {...props}
+      className={classNames("font-medium", outlineClasses, props.className)}
+    >
+      {props.children}
+    </button>
+  );
 }

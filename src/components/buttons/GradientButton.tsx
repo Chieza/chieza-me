@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
-import CustomButton from "./CustomButton";
-import type { ButtonProps } from "./CustomButton";
+import React from "react";
+import classNames from "classnames";
 
-export interface GradientButtonProps extends Omit<ButtonProps, "variant"> {
-  to?: string;
-}
+const gradientClasses = [
+  "px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-700 text-white rounded-lg shadow-lg shadow-blue-500/24 transition-all duration-300 ease-in-out hover:from-purple-400 hover:to-blue-400 hover:text-black/80 hover:cursor-pointer",
+].join(" ");
 
-export default function GradientButton({ to, ...props }: GradientButtonProps) {
-  const button = <CustomButton variant="gradient" {...props} />;
-  return to ? <Link to={to}>{button}</Link> : button;
+export default function GradientButton(
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>
+) {
+  return (
+    <button
+      {...props}
+      className={classNames("font-medium", gradientClasses, props.className)}
+    >
+      {props.children}
+    </button>
+  );
 }

@@ -5,11 +5,14 @@ import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "../../assets/images/logo.svg";
 
 interface MainNavbarProps {
-  onContactClick: () => void
-  onLoginClick: () => void
+  onContactClick: () => void;
+  onLoginClick: () => void;
 }
 
-export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarProps) {
+export default function MainNavbar({
+  onContactClick,
+  onLoginClick,
+}: MainNavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -24,19 +27,29 @@ export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarP
 
         {/* Nav Links */}
         <div className="hidden md:flex flex-1 justify-center space-x-6">
-          <NavbarButton to="/">Home</NavbarButton>
-          <NavbarButton to="/about">About</NavbarButton>
-          <NavbarButton to="/experiences">Experiences</NavbarButton>
-          <NavbarButton to="/portfolio">Portfolio</NavbarButton>
-          <NavbarButton to="/side-projects">Side Projects</NavbarButton>
+          <Link to="/">
+            <NavbarButton>Home</NavbarButton>
+          </Link>
+          <Link to="/about">
+            <NavbarButton>About</NavbarButton>
+          </Link>
+          <Link to="/experiences">
+            <NavbarButton>Experiences</NavbarButton>
+          </Link>
+          <Link to="/portfolio">
+            <NavbarButton>Portfolio</NavbarButton>
+          </Link>
+          <Link to="/side-projects">
+            <NavbarButton>Side Projects</NavbarButton>
+          </Link>
         </div>
 
         {/* Action Buttons & Mobile Toggle */}
         <div className="flex items-center space-x-4">
           {/* Hide Action Buttons on Mobile */}
           <div className="hidden sm:flex space-x-4">
-              <OutlineButton onClick={onLoginClick}>Login</OutlineButton>
-              <GradientButton onClick={onContactClick}>Contact</GradientButton>
+            <OutlineButton onClick={onLoginClick}>Login</OutlineButton>
+            <GradientButton onClick={onContactClick}>Contact</GradientButton>
           </div>
           {/* Mobile Toggle */}
           <button
@@ -51,18 +64,10 @@ export default function MainNavbar({ onContactClick, onLoginClick }: MainNavbarP
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden px-8 py-8 space-y-4 text-white bg-neutral-900">
-          <Link
-            to="/"
-            onClick={() => setOpen(false)}
-            className="block"
-          >
+          <Link to="/" onClick={() => setOpen(false)} className="block">
             Home
           </Link>
-          <Link
-            to="/about"
-            onClick={() => setOpen(false)}
-            className="block"
-          >
+          <Link to="/about" onClick={() => setOpen(false)} className="block">
             About
           </Link>
           <Link
