@@ -7,7 +7,7 @@ const contentMap: Record<SkillGroup, string[]> = {
   research:    ['Design Thinking', 'Usability Testing', 'User Flows', 'Wireframing', 'Surveys', 'Documentation'],
   'soft-meta': ['Agile/Scrum', 'Sprint Planning','Autonomy', 'Async Collaboration', 'Accessibility Awareness'],
   management:  ['Azuer DevOps', 'ClickUp', 'Notion', 'Google Workspace', 'Trello'],
-  comms:       ['Microsoft Teams', 'Discord', 'Slack', 'Discord'],
+  comms:       ['Microsoft Teams', 'Discord', 'Slack', 'Feel others'],
   dev:         ['React', 'TypeScript', 'Tailwind', 'GitHub', 'Vite', 'HTML & CSS'],
 }
 
