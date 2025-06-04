@@ -1,4 +1,4 @@
-//import React from "react";
+import { Link } from "react-router-dom";
 import meImg from "../../assets/images/me_480x600.jpg";
 import ExpandableText from "../common/ExpandableText";
 import { GradientButton } from "../buttons";
@@ -48,9 +48,9 @@ export default function MeCard() {
           responsiveLines={{ lg: 4 }}
           className="text-base lg:text-lg"
         />
-        <GradientButton to="/about" className="w-full lg:w-auto">
-          My Trajectory →
-        </GradientButton>
+        <Link to="/about">
+            <GradientButton className="w-full lg:w-auto">My Trajectory →</GradientButton>
+          </Link>
       </div>
     </div>
   );
