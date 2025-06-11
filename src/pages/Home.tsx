@@ -1,5 +1,5 @@
 import useDocumentTitle from '../hooks/useDocumentTitle'
-import { HeroSection, MeSection, HighlightSection, SkillsToolsSection, Footer } from '../components/sections';
+import { HeroSection, MeSection, HighlightSection, SkillsToolsSection } from '../components/sections';
 
 interface HomeProps {
   openContact: () => void
@@ -14,7 +14,6 @@ export default function Home({ openContact }: HomeProps) {
     <MeSection id="me-section" />
     <HighlightSection id="highlight-section" />
     <SkillsToolsSection id="skills-tools-section" />
-    <Footer />
     </>
   );
 }

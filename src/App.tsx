@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MainNavbar, NavHub } from "./components/navigation";
+import { Footer } from "./components/sections";
 import AppRoutes from "./routes/AppRoutes";
-import ContactModal from "./components/modals/ContactModal";
-import LoginModal from "./components/modals/LoginModal";
+import { ContactModal, LoginModal} from "./components/modals";
 import { SectionsProvider } from "./contexts/SectionsProvider";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
         <NavHub />
         <main className="w-full flex flex-col justify-start items-center overflow-hidden text-white">
           <AppRoutes openContact={openContact} />
+          <Footer />
         </main>
       </SectionsProvider>
 
