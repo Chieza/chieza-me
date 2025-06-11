@@ -1,10 +1,10 @@
 import { useState } from "react";
-import SkillsGroupButton from "../buttons/SkillsGroupButton";
-import type { SkillGroup } from "../../utils/skillGroups";
-import SkillsToolsPanel from "../panels/SkillsToolsPanel";
-import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import SkillsGroupButton from "../../buttons/SkillsGroupButton";
+import type { SkillGroup } from "../../../utils/skillGroups";
+import SkillsToolsPanel from "../../panels/SkillsToolsPanel";
+import { useSectionRegistry } from "../../../hooks/useSectionRegistry";
 import { HiOutlinePuzzle } from "react-icons/hi";
-import { SectionContentLayout } from "../layouts/index";
+import { SectionContentLayout } from "../../layouts/index";
 
 interface SkillsToolsProps {
   id: string;

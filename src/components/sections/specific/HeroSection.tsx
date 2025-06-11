@@ -1,9 +1,9 @@
 import HeroBg from "../../assets/images/backgrounds/sections/hero-bg.png";
 import { Link } from "react-router-dom";
-import { OutlineButton, GradientButton } from "../buttons";
-import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { OutlineButton, GradientButton } from "../../buttons";
+import { useSectionRegistry } from "../../../hooks/useSectionRegistry";
 import { HiHome } from "react-icons/hi";
-import { SectionContentLayout } from "../layouts/index";
+import { SectionContentLayout } from "../../layouts/index";
 
 interface HeroSectionProps {
   id: string;

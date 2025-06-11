@@ -1,9 +1,9 @@
 import HighlightBg from "../../assets/images/backgrounds/sections/highlight-bg.png";
 import ComponentsExample from "../../assets/images/projects/components-example.jpg";
 import VariablesExample from "../../assets/images/projects/variables-example.jpg";
-import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import { useSectionRegistry } from "../../../hooks/useSectionRegistry";
 import { HiStar } from "react-icons/hi";
-import { SectionContentLayout } from "../layouts/index";
+import { SectionContentLayout } from "../../layouts/index";
 
 interface HighlightSectionProps {
   id: string;

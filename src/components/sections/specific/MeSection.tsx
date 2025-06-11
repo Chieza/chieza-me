@@ -1,7 +1,7 @@
-import MeCard from "../cards/MeCard";
-import { useSectionRegistry } from "../../hooks/useSectionRegistry";
+import MeCard from "../../cards/MeCard";
+import { useSectionRegistry } from "../../../hooks/useSectionRegistry";
 import { HiUser } from "react-icons/hi";
-import { SectionContentLayout } from "../layouts/index";
+import { SectionContentLayout } from "../../layouts/index";
 
 interface MeSectionProps {
   id: string;
