@@ -38,7 +38,7 @@ export default function About() {
         <h1 className="text-4xl/12 md:text-4xl/12 font-bold">
           My Tech Journey: From Pixels to Product
         </h1>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           <div className="flex flex-row items-center gap-1 text-white/64 font-light">
             <HiOutlineClock />
             <p className="text-xs">Total reading time: 6 min</p>
@@ -152,7 +152,7 @@ export default function About() {
 
           {/* Section Content */}
           {/* First Block */}
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex grow flex-col gap-8">
               <div className="flex flex-col gap-2">
                 <p className="text-white/64 font-medium">
@@ -208,7 +208,7 @@ export default function About() {
           </div>
 
           {/* Second Block */}
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-none">
               <img
                 src={KidMaintenanceImg}
@@ -280,7 +280,7 @@ export default function About() {
 
           {/* Section Content */}
           {/* First Block */}
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-none">
               <img
                 src={YoungTeacherImg}
@@ -378,7 +378,7 @@ export default function About() {
 
           {/* Section Content */}
           {/* First Block */}
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-none">
               <img
                 src={LeanInceptionImg}
