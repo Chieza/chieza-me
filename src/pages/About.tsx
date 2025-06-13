@@ -466,7 +466,7 @@ export default function About() {
                 English-speaking role overseas.
               </li>
               <li>
-                How am I doing it? With save0d funds from the Exchange Programs,
+                How am I doing it? With saved funds from the Exchange Programs,
                 I'm now heavily reiforcing my design foundation with studies,
                 networking, etc... Actively returning to coding to build my own
                 website, showcasing my holistic understanding of product
@@ -474,9 +474,10 @@ export default function About() {
               </li>
               <li>
                 If overseas, I'm open to a Junior role so it allows me to
-                solidify my design foundation. My aspiration is to combine
-                design and development skills, bridging the gap between design,
-                tech teams, and business needs.
+                solidify my design foundation even though I already have a quite
+                solid one, I want it now on a different environment. My
+                aspiration is to combine design and development skills, bridging
+                the gap between design, tech teams, and business needs.
               </li>
             </ul>
           </div>
