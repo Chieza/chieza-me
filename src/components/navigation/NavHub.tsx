@@ -12,11 +12,11 @@ export default function NavHub() {
   };
   
   // Defines the First Button, always scrolls to top - 64px, so it activates the current section's feedback of NavHub
-  const handleButtonClick = (sectionId: string, buttonIndex: number) => {
+  const handleButtonClick = (sectionId: string, sectionScrollOffSet: number, buttonIndex: number) => {
   if (buttonIndex === 0) {
     handleScrollToTop();
   } else {
-    scrollToSection(sectionId);
+    scrollToSection(sectionId, sectionScrollOffSet);
   }
 };
 
@@ -32,7 +32,7 @@ export default function NavHub() {
         <NavHubButton
           key={section.id}
           aria-label={section.label}
-          onClick={() => handleButtonClick(section.id, index)}
+          onClick={() => handleButtonClick(section.id, section.scrollOffSet, index)}
           // Apply active state styling
           className={activeSectionId === section.id ? "bg-white/16" : ""}
         >

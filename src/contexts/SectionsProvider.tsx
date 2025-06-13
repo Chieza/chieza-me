@@ -37,12 +37,10 @@ export const SectionsProvider: React.FC<{ children: React.ReactNode }> = ({
     setSections((prevSections) => prevSections.filter((s) => s.id !== id));
   }, []);
 
-  const scrollToSection = useCallback((id: string) => {
+  const scrollToSection = useCallback((id: string, scrollOffSet?: number) => {
     const element = document.getElementById(id);
     if (element) {
-      const MainNavbarHeight = 64;
-      const TargetScrollPosition = element.offsetTop - MainNavbarHeight;
-
+      const TargetScrollPosition = element.offsetTop - (scrollOffSet ? scrollOffSet : 0);
       window.scrollTo({ top: TargetScrollPosition, behavior: "smooth"});
     }
   }, []);

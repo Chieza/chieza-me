@@ -6,16 +6,17 @@ import type { NavSection } from '../types/nav-section'; // Import NavSection
 export const useSectionRegistry = (
   id: NavSection['id'], // Explicitly typing 'id' as NavSection's id type
   icon: NavSection['icon'], // Explicitly typing 'icon' as NavSection's icon type
-  label: NavSection['label'] // Explicitly typing 'label' as NavSection's label type
+  label: NavSection['label'], // Explicitly typing 'label' as NavSection's label type
+  scrollOffSet?: NavSection['scrollOffSet'] // Explicitly typing 'scrollOffset' as NavSection's scrollOffSet type
 ) => {
   const { registerSection, unregisterSection } = useSections();
 
   useEffect(() => {
     // The object creation is now correctly inside the effect
-    registerSection({ id, icon, label });
+    registerSection({ id, icon, label, scrollOffSet });
 
     return () => {
       unregisterSection(id);
     };
-  }, [id, icon, label, registerSection, unregisterSection]);
+  }, [id, icon, label, scrollOffSet, registerSection, unregisterSection]);
 };

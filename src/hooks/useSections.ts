@@ -8,7 +8,7 @@ interface SectionsContextType {
   activeSectionId: string | null;
   registerSection: (section: NavSection) => void;
   unregisterSection: (id: string) => void;
-  scrollToSection: (id: string) => void;
+  scrollToSection: (id: string, scrollOffSet: number) => void;
 }
 
 // Custom hook to consume the context
