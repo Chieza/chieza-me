@@ -32,7 +32,7 @@ export default function NavHub() {
         <NavHubButton
           key={section.id}
           aria-label={section.label}
-          onClick={() => handleButtonClick(section.id, section.scrollOffSet, index)}
+          onClick={() => handleButtonClick(section.id, (section.scrollOffSet ? section.scrollOffSet : 0), index)}
           // Apply active state styling
           className={activeSectionId === section.id ? "bg-white/16" : ""}
         >
