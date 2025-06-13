@@ -9,7 +9,6 @@ import { SectionsContext } from "./_sections-context"; // Import the context obj
 
 // Provider component that manages state and provides the context value
 
-
 export const SectionsProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -41,7 +40,10 @@ export const SectionsProvider: React.FC<{ children: React.ReactNode }> = ({
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const MainNavbarHeight = 64;
+      const TargetScrollPosition = element.offsetTop - MainNavbarHeight;
+
+      window.scrollTo({ top: TargetScrollPosition, behavior: "smooth"});
     }
   }, []);
 
