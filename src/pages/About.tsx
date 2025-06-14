@@ -24,7 +24,7 @@ export default function About() {
   // Page Title
   useDocumentTitle("About • Bruno");
 
-  // Registering sections in NavHub
+  // Registering sections for NavHub
   useSectionRegistry("spark-section", HiOutlineSparkles, "Spark", 96);
   useSectionRegistry("devDesign-section", HiOutlineLightBulb, "DevDesign", 96);
   useSectionRegistry("career-section", IoGameControllerOutline, "Career", 96);
@@ -73,6 +73,12 @@ export default function About() {
               <li>
                 1996: A future tech guy was born... He'd never guess his early
                 fascination!
+              </li>
+              <li>
+                My very first interaction with technology was the Super
+                Nintendo. I vividly remember playing "A Bug's Life," the only
+                game we had, which made my eyes "shine like water." This sparked
+                my digital immersion.
               </li>
             </ul>
           </div>
